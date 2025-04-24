@@ -166,7 +166,7 @@ class NeuralNet:
         data: List[Tuple[I, O]],
         learning_rate: float = 0.5,
         momentum_factor: float = 0.1,
-        iters: int = 1000,
+        iters: int = 3000,
         print_interval: int = 100,
     ) -> None:
         """Carries out a training cycle on the neural net
@@ -295,3 +295,4 @@ class NeuralNet:
         """Switches activation function between sigmoid and hyperbolic tangent"""
         self.act_function = tanh if self.act_function_is_sigmoid else sigmoid
         self.dact_function = d_tanh if self.act_function_is_sigmoid else d_sigmoid
+        
